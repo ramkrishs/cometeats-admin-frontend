@@ -1,0 +1,121 @@
+<div class="col-xs-12 col-md-12">
+
+    <div class="card">
+        <div class="card-block">
+            <h4 class="card-title">{{foodJoint.name}}</h4>
+            <h6 class="card-subtitle text-muted">Resturant Options</h6>
+        </div>
+        <div class="card-block">
+
+            <a  ng-click="open(foodJoint)"  class="card-link">Edit</a>
+            <a ng-click="deleteFoodJoint()" class="card-link">Delete</a>
+            <a ng-click="addMenu()" class="card-link">Add Menu</a>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3>FoodJoint</h3>
+        </div>
+        <form class="form-inline" name="foodjoint" >
+
+            <!-- One Col -->
+            <div class="form-group two-col">
+                <label for="name">Name</label>
+                <input type="text" ng-model="foodJoint.name" name="name" id="name" class="form-control">
+            </div>
+            <div class="form-group two-col">
+                <label for="delay_time">Delay Time</label>
+                <input type="text" ng-model="foodJoint.delay_time" name="delay_time" id="delay_time" class="form-control">
+            </div>
+            <!-- End One Col -->
+
+            <!-- Two Col -->
+            <div class="form-group three-col">
+                <label for="open_time">Open Time</label>
+                <input type="text" ng-model="foodJoint.open_time" name="open_time" id="open_time" class="form-control">
+            </div>
+            <div class="form-group three-col">
+                <label for="closed_time">Close Time</label>
+                <input type="text" ng-model="foodJoint.closed_time" name="closed_time" id="closed_time" class="form-control">
+            </div>
+            <div class="form-group three-col">
+                <label for="wait_time">Wait Time</label>
+                <input type="text" ng-model="foodJoint.wait_time" name="wait_time" id="wait_time" class="form-control">
+            </div>
+            <!-- End Two Col -->
+            <div class="form-group four-col">
+                <label for="helper_total">Helper Total</label>
+                <input type="text" ng-model="foodJoint.helper_total" name="helper_total" id="helper_total" class="form-control">
+            </div>
+            <div class="form-group four-col">
+                <label for="helper_efficiency">Helper Efficiency</label>
+                <input type="text" ng-model="foodJoint.helper_efficiency" name="helper_efficiency" id="helper_efficiency" class="form-control">
+            </div>
+            <div class="form-group four-col">
+                <label for="chef_total">Chef Total</label>
+                <input type="text" ng-model="foodJoint.chef_total" name="chef_total" id="chef_total" class="form-control">
+            </div>
+            <div class="form-group four-col">
+                <label for="chef_efficiency">Chef Efficiency</label>
+                <input type="text" ng-model="foodJoint.chef_efficiency" name="chef_efficiency" id="chef_efficiency" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+                <p class="pull-md-left" ng-show="isRes">{{resMsg}}</p>
+                <button class="btn btn-warning" ng-click="cancel()">Close</button>
+                <input type="button"  ng-click="submit()" class="btn primary-btn" value="Submit" />
+            </div>
+        </form>
+    </script>
+    <script type="text/ng-template" id="menuModalContent.html">
+        <div class="modal-header">
+            <h3>Menu</h3>
+        </div>
+        <form class="form-inline" name="menu" >
+
+            <!-- One Col -->
+            <div class="form-group two-col">
+                <label for="name">Name</label>
+                <input type="text" ng-model="item.name" name="name" id="name" class="form-control">
+            </div>
+            <div class="form-group two-col">
+                <label for="price">Price</label>
+                <input type="text" ng-model="item.price" name="price" id="price" class="form-control">
+            </div>
+            <!-- End One Col -->
+            <div class="form-group one-col">
+                <label for="description">Description</label>
+                <input type="text" ng-model="item.description" name="description" id="description" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+                <p class="pull-md-left" ng-show="isRes">{{resMsg}}</p>
+                <button class="btn btn-warning" ng-click="cancel()">Close</button>
+                <input type="button"  ng-click="submit()" class="btn primary-btn" value="Submit" />
+            </div>
+        </form>
+    </script>
+    <p class="display-4">Menu</p>
+    <div class="row">
+
+            <div  ng-repeat="item in foodJoint.menu">
+                <div class="col-xs-4">
+                    <div class="card" style="width: 300px;height: 300px;">
+                        <div class="menu-img"  back-img="{{item.image}}" alt="{{item.name}}" ></div>
+                        <div class="card-block">
+                            <h4 class="card-title">{{item.name}}</h4>
+                            <p class="card-text">Price :{{item.price}}</p>
+                            <input type="hidden" n></input>
+                            <a  ng-click="menuOpen(item,item.id)"  class="card-link btn-link">Edit</a>
+                            <a  ng-click="delMenu()" class="card-link btn-link">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+        <h6>Thanks for contributing your time!!</h6>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 offset-md-3 offset-md-3">
+        <form  class="form" ng-submit="sendEmail()" novalidate name="contactForm">
+            <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" ng-model="user.name" placeholder="Your name" tabindex="1" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" ng-model="user.email" placeholder="Your Email" tabindex="2" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea rows="5" cols="50" name="message" class="form-control" id="message" ng-model="user.message" placeholder="Message..." tabindex="4" required></textarea>
+            </div>
+            <div class="text-xs-center">
+                <input type="submit" class="btn btn-start-order" value="Submit" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script>
+    // Test for placeholder support
+    $.support.placeholder = (function(){
+        var i = document.createElement('input');
+        return 'placeholder' in i;
+    })();
+
+    // Hide labels by default if placeholders are supported
+    if($.support.placeholder) {
+        $('.form-label').each(function(){
+            $(this).addClass('js-hide-label');
+        });
+
+        // Code for adding/removing classes here
+        $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
+
+            // Cache our selectors
+            var $this = $(this),
+                    $parent = $this.parent().find("label");
+
+            if (e.type == 'keyup') {
+                if( $this.val() == '' ) {
+                    $parent.addClass('js-hide-label');
+                } else {
+                    $parent.removeClass('js-hide-label');
+                }
+            }
+            else if (e.type == 'blur') {
+                if( $this.val() == '' ) {
+                    $parent.addClass('js-hide-label');
+                }
+                else {
+                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                }
+            }
+            else if (e.type == 'focus') {
+                if( $this.val() !== '' ) {
+                    $parent.removeClass('js-unhighlight-label');
+                }
+            }
+        });
+    }
+</script>

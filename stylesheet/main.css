@@ -1,0 +1,480 @@
+/**
+ *  Main CSS 
+ *  @author : Ramakrishnan Sathyavageeswaran
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 50px;
+    background-color: #ffffff;
+
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    background: #FFC107;
+    z-index: 99999;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    /*background: url("../images/foot-bg.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 8px 17px;*/
+}
+#startSurvey{
+    border-radius: 0px !important;
+}
+.main-container{
+    margin-top: 1%;
+}
+.ld-logo{
+    width: 180px;
+}
+blockquote{
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    box-shadow: rgba(0, 0, 0, 0.117647) -1px 2px 6px, rgba(0, 0, 0, 0.117647) -1px 3px 4px;
+}
+.navbar a {
+    line-height: 50px;
+}
+.bg-faded{
+    background: #fff;
+}
+.col-xs-12 .center_div{
+    margin: 0 auto;
+    width:40% /* value of your choice which suits your alignment */
+}
+
+.col-sm-12 .center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+}
+.col-md-12 .center_div{
+    margin: 0 auto;
+    width:50% /* value of your choice which suits your alignment */
+}
+.col-lg-12 .center_div{
+    margin: 0 auto;
+    width:40% /* value of your choice which suits your alignment */
+}
+
+
+
+@-webkit-keyframes scaleanimation {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes scaleanimation {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+footer {
+    color: #ffffff;
+}
+footer .fa{
+    color: #F44336;
+}
+.footer-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 12px;
+    transform: translate(-50%,-50%);
+}
+
+
+@media only screen and (min-width:960px){
+    /* styles for browsers larger than 960px; */
+    .nav-title{
+        font-size: 2rem;
+    }
+    .nav-subtitle{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:1440px) and (max-width: 1599px){
+
+    .ld-logo{
+        width: 180px;
+    }
+
+}
+@media only screen and (min-width:1600px){
+
+    /* for sumo sized (mac) screens */
+    .ld-logo{
+        width: 180px;
+    }
+}
+@media only screen and (max-device-width:480px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device-width:768px){
+    /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
+}
+
+
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+
+
+}
+
+/* Portrait */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+    .navbar-nav{
+        padding-right: 13%;
+    }
+}
+
+/* Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+    .navbar-nav{
+        padding-right: 15% !important;
+    }
+
+}
+
+/* Landscape */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    .navbar-nav{
+        padding-right: 18%;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .navbar-brand{
+        padding-left: 20%;
+    }
+    .navbar-nav{
+        padding-right: 10% ;
+    }
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    .navbar-brand{
+        padding-left: 20%;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+    .navbar-brand{
+        padding-left: 20%;
+    }
+
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+    .navbar-brand{
+        padding-left: 25%;
+    }
+    .navbar-nav {
+        padding-right: 17% !important;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+    .navbar-brand{
+        padding-left: 25%;
+    }
+    .navbar-nav {
+        padding-right: 20%;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+
+}
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+textarea {
+    resize: none;
+}
+.form-label {
+    font-size: 12px;
+    color: #5e9bfc;
+    margin: 0;
+    display: block;
+    opacity: 1;
+    -webkit-transition: .333s ease top, .333s ease opacity;
+    transition: .333s ease top, .333s ease opacity;
+}
+
+.js-hide-label {
+    opacity: 0;
+}
+.js-unhighlight-label {
+    color: #999
+}
+.btn-start-order {
+    background: 0 0 #ffffff;
+    border: 1px solid #2f323a;
+    border-radius: 3px;
+    color: #2f323a;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: inherit;
+    margin: 30px 0;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
+}
+.btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+    border-color: #5e9bfc;
+    color: #5e9bfc;
+}
+
+.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+.card img{
+
+}
+/*.card {*/
+    /*max-width: 20rem !important;*/
+/*}*/
+.form-inline .form-group input {
+    width:100%;
+}
+.form-group {
+    float: left;
+}
+.form-group:last-child{
+    padding-right: 0%;
+}
+.one-col{
+    width: 100%;
+    padding: 10px;
+}
+.two-col{
+    width: 50%;
+    padding: 10px;
+}
+
+.three-col{
+    width: 33.33%;
+    padding: 10px;
+}
+.four-col{
+    width: 24.75%;
+    padding: 10px;
+}
+
+.display-4{
+    font-size: 2.5em;
+}
+div[back-img]{
+    width: 300px;
+
+    color: #fff;
+}
+.menu-img{
+    height: 130px;
+    background-repeat: no-repeat;
+    background-position-y: -112px;
+}
+.card-link{
+    text-decoration: none;
+}
+.card-link a:hover{
+    text-decoration: underline !important;
+}

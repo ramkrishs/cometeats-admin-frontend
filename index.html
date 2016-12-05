@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cometbites">
+<head>
+    <meta charset="UTF-8">
+    <title>CometBites Admin</title>
+    <!--vendor Stylesheet -->
+    <link rel="stylesheet" href="stylesheet/vendor/bootstrap.css">
+    <link rel="stylesheet" href="stylesheet/vendor/sweet-alert.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google font -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">-->
+
+    <!--custom Stylesheet -->
+
+
+
+</head>
+<body ui-router-styles>
+<nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#"><img class="ld-logo" src="images/logo.png"></a>
+    <div class="nav navbar-nav pull-xs-right">
+        <a class="nav-item nav-link " ui-sref="home.view" >Home</a>
+
+        <a class="nav-item nav-link " >Contact</a>
+    </div>
+</nav>
+
+<div ui-view></div>
+<footer class="footer">
+    <div class="container">
+        <p class="text-xs-center footer-text"><strong>MADE WITH <i class="fa fa-heart" aria-hidden="true"></i> IN COMETBITES.COM </strong></p>
+
+    </div>
+</footer>
+
+<script src="javascripts/vendor/jquery-2.2.4.js"></script>
+<script src="javascripts/vendor/tether.min.js"></script>
+<script src="javascripts/vendor/bootstrap.js"></script>
+<script src="javascripts/vendor/angular.js"></script>
+<script src="javascripts/vendor/angular-route.js"></script>
+<script src="javascripts/vendor/angular-ui-router.js"></script>
+<script src="javascripts/vendor/angular-resource.js"></script>
+<script src="javascripts/vendor/angular-animate.js"></script>
+<script src="javascripts/vendor/ui-bootstrap-tpls.js"></script>
+<script src="javascripts/vendor/sweet-alert.min.js"></script>
+<script src="javascripts/vendor/ngSweetalert.js"></script>
+
+<script src="javascripts/services/vendor/uiRouteStyle.js"></script>
+
+<script src="javascripts/app.js"></script>
+
+<script src="javascripts/controller/MainController.js"></script>
+
+<script src="javascripts/controller/AboutController.js"></script>
+<script src="javascripts/controller/ContactController.js"></script>
+<script src="javascripts/controller/ViewController.js"></script>
+<script src="javascripts/controller/FoodController.js"></script>
+<script src="javascripts/directives/PhoneNumber.js"></script>
+
+<script src="javascripts/services/CometbitesService.js"></script>
+
+<script src="javascripts/script.js"></script>
+</body>
+</html>
